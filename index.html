@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>News Finder</title>
+</head>
+<body>
+    <div class="mx-auto text-center mt-10">
+        <input type="text" id="usersInput" class="w-80 rounded-tl-full rounded-bl-full p-5 border-indigo-500 border-2" placeholder="Type Company name or ticker ...">
+        <button id="btnSearch" class="rounded-tr-full rounded-br-full bg-slate-800 hover:bg-indigo-800 hover:text-white p-5 pl-4 text-blue-300 font-bold border-2 border-indigo-500">Find News</button>
+        <iframe class="mt-10 w-fit mx-auto hidden" id="gettingDataAnim" src="https://lottie.host/?file=7bcc90be-e5b3-4b5e-b658-93fe4db4a3d6/XLDBgAggzt.json"></iframe>
+        <div id="feed" class="mt-10 w-fit mx-auto">
+        <!-- All news will be injected here ... -->
+        </div>
+    </div>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "newsapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://github.com/grety22/newsapi",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Gretel Martinez",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "dotenv": "^16.0.3"
+  },
+  "type": "module"
+}
