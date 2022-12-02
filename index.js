@@ -103,13 +103,13 @@ const displayAllNews = (allNews) => {
 			const newsP = document.createElement("p")
 			const newsLink = document.createElement("a")
 			// Add styles class to the div container
-			newsCard.classList.add("border-2", "bg-slate-100", "p-5", "text-left", "rounded-tr-[25px]", "mt-4", "hover:border-indigo-800", "hover:cursor-pointer", "transition", "delay-150", "duration-300", "ease-in-out")
+			newsCard.classList.add("border-2", "bg-slate-100", "p-5", "text-left", "sm:rounded-tr-[25px]", "mt-4", "hover:border-indigo-800", "hover:cursor-pointer", "transition", "delay-150", "duration-300", "ease-in-out")
 			// Add styles class to the date's span
 			newsDate.classList.add("text-indigo-600")
 			// Add styles class to the paragraph
 			newsP.classList.add("text-left")
 			// Add styles class to the Link
-			newsLink.classList.add("font-bold", "underline", "underline-offset-8", "hover:text-indigo-800")
+			newsLink.classList.add("font-bold", "underline", "underline-offset-8", "hover:text-indigo-800", "break-words")
 			// Add content to the paragraph
 			newsP.innerHTML = oneNews.title
 			// Add content to the Link

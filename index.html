@@ -8,17 +8,17 @@
   <title>News Finder</title>
 </head>
 <body>
-    <div id="apiContainer"class="mx-auto text-center my-10">
+    <div id="apiContainer"class="mx-auto w-fit text-center my-10">
       <!-- Auth 1st -->
-      <input type="text" id="usersInputKey" class="w-96 rounded-full rounded-bl-full p-5 border-indigo-500 border-2 mb-5" placeholder="Paste your Bloomberg API key">
-      <p>If you dont have a RapidAPI key, get a new one here: </p>
-      <a class="font-bold text-indigo-400" href="https://rapidapi.com/apidojo/api/bloomberg-market-and-financial-news/" target="_blank">https://rapidapi.com/apidojo/api/bloomberg-market-and-financial-news/</a>
+      <input type="text" id="usersInputKey" class="w-60 sm:w-80 md:w-96 rounded-full rounded-bl-full p-5 border-indigo-500 border-2 mb-5" placeholder="Paste your Bloomberg API key">
+      <p class="mx-auto mb-5 w-60 sm:w-80 md:w-96">If you dont have a RapidAPI key, get a new one here: </p>
+      <a class="mx-auto block break-words font-bold text-indigo-400 hover:text-indigo-700" href="https://rapidapi.com/apidojo/api/bloomberg-market-and-financial-news/" target="_blank">https://rapidapi.com/apidojo/api/bloomberg-market-and-financial-news/</a>
     </div>
     <div id="searchContainer" class="mx-auto text-center mt-10 hidden">
-        <input type="text" id="usersInput" class="w-80 rounded-tl-full rounded-bl-full p-5 border-indigo-500 border-2" placeholder="Type Company name or ticker ...">
+        <input type="text" id="usersInput" class="w-50 sm:w-80 md:w-96 rounded-tl-full rounded-bl-full p-5 border-indigo-500 border-2" placeholder="Type Company name or ticker ...">
         <button id="btnSearch" class="rounded-tr-full rounded-br-full bg-slate-800 hover:bg-indigo-800 hover:text-white p-5 pl-4 text-blue-300 font-bold border-2 border-indigo-500">Find News</button>
         <iframe class="mt-10 w-fit mx-auto hidden" id="gettingDataAnim" src="https://lottie.host/?file=7bcc90be-e5b3-4b5e-b658-93fe4db4a3d6/XLDBgAggzt.json"></iframe>
-        <div id="feed" class="mt-10 w-fit mx-auto">
+        <div id="feed" class="mt-10 sm:w-fit mx-auto">
         <!-- All news will be injected here ... -->
         </div>
     </div>
