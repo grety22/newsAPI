@@ -1,9 +1,35 @@
 // Main Goal :
 // Gets User's Input and Research for news about the Input (Company, ticker ...)
+
+var apiContainer = document.getElementById('apiContainer')
+var searchContainer = document.getElementById('searchContainer')
 // Create variable to store the btn element
 var btnSearch = document.getElementById("btnSearch")
 // Create variable to store the user's input
 var usersInput = document.getElementById("usersInput")
+// Create variable to store the user's input
+var usersInputKey = document.getElementById("usersInputKey")
+// Create a var to storage the API key
+var apiKey = ''
+
+// Get the API key from the input 
+usersInputKey.addEventListener("keypress", function (event) {
+	// If the user presses the "Enter" key on the keyboard
+	if (event.key === "Enter") {
+		// Cancel the default action, if needed
+		event.preventDefault()
+		// Check if input is not empty 
+		if (usersInputKey.value.trim().length !== 0) {
+			// save the api value 
+			apiKey = usersInputKey.value
+			// show the search news input
+			searchContainer.classList.remove("hidden")
+			apiContainer.classList.add("hidden")
+		} else {
+			alert('I dont like to alert, but in order to find news you must type a valid API key first')
+		}
+	}
+});
 
 // iframe with loading animation to show while searching
 const loader = document.querySelector("#gettingDataAnim");
@@ -51,8 +77,8 @@ const getDatafromEndPoint = (url) => {
 		}
 	};
 	// Bloomberg API - requires Authorization to be sent
-	xhr.setRequestHeader("X-RapidAPI-Key", config.XRK);
-	xhr.setRequestHeader("X-RapidAPI-Host", config.XRHOST);
+	xhr.setRequestHeader("X-RapidAPI-Key", apiKey);
+	xhr.setRequestHeader("X-RapidAPI-Host", "bloomberg-market-and-financial-news.p.rapidapi.com");
 
 	// Sending the request
 	xhr.send(data);

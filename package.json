@@ -13,9 +13,5 @@
   "devDependencies": {
     "tailwindcss": "^3.2.4"
   },
-  "dependencies": {
-    "browserify": "^17.0.0",
-    "dotenv": "^16.0.3"
-  },
   "type": "module"
 }
